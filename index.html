@@ -296,15 +296,33 @@
 
     .exp-entry {
       display: grid;
-      grid-template-columns: 160px minmax(0, 1fr);
+      grid-template-columns: 135px minmax(0, 1fr);
       gap: 1.25rem;
+      align-items: start;
+    }
+    .exp-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      text-align: center;
+    }
+    .exp-logo img {
+      width: 76px;
+      height: 76px;
+      object-fit: contain;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 0.45rem;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
     }
     .exp-date {
-      font-size: 0.77rem;
+      font-size: 0.72rem;
       font-weight: 650;
       color: var(--accent);
       font-variant-numeric: tabular-nums;
-      padding-top: 0.12rem;
+      line-height: 1.3;
       white-space: nowrap;
     }
     .exp-body h3 { font-size: 0.93rem; font-weight: 750; margin-bottom: 0.04rem; }
@@ -382,7 +400,10 @@
       section, #about { padding: 1.25rem; }
       .pub-entry { grid-template-columns: 1fr; }
       .pub-thumb img { width: 100%; height: 180px; }
-      .exp-entry { grid-template-columns: 1fr; gap: 0.25rem; }
+      .exp-entry { grid-template-columns: 1fr; gap: 0.75rem; }
+      .exp-logo { align-items: flex-start; flex-direction: row; text-align: left; }
+      .exp-logo img { width: 56px; height: 56px; border-radius: 12px; }
+      .exp-date { white-space: normal; padding-top: 0.25rem; }
       .nav-links a { padding-left: 0; }
     }
   </style>
@@ -457,7 +478,7 @@
           </div>
 
           <div class="hero-photo">
-            <img src="images/me.jpg" alt="Armin Soleymani">
+            <img src="photo/me.jpg" alt="Armin Soleymani">
           </div>
 
         </div>
@@ -470,7 +491,7 @@
           <div class="pub-item">
             <div class="pub-entry">
               <div class="pub-thumb">
-                <img src="images/radar.jpg" alt="RadarPose project thumbnail" loading="lazy">
+                <img src="photo/radar.jpg" alt="RadarPose project thumbnail" loading="lazy">
               </div>
               <div class="pub-content">
                 <p class="pub-title">RadarPose: Frequency-Domain Diffusion for mmWave Radar-Based Human Pose Estimation</p>
@@ -497,7 +518,7 @@
           <div class="pub-item">
             <div class="pub-entry">
               <div class="pub-thumb">
-                <img src="images/firet.jpg" alt="FiReT project thumbnail" loading="lazy">
+                <img src="photo/firet.jpg" alt="FiReT project thumbnail" loading="lazy">
               </div>
               <div class="pub-content">
                 <p class="pub-title">FiReT: A Neural Radiance Fields Framework for Wireless Field Reconstruction and Transmitter Placement</p>
@@ -533,7 +554,10 @@
         <div class="exp-list">
 
           <div class="exp-entry">
-            <div class="exp-date">May 2026 – present</div>
+            <div class="exp-logo">
+              <img src="photo/gruvi_logo.png" alt="GrUVi Lab logo" loading="lazy">
+              <div class="exp-date">May 2026 – present</div>
+            </div>
             <div class="exp-body">
               <h3>GrUVi Lab @ Simon Fraser University</h3>
               <p class="role">Research Assistant</p>
@@ -545,7 +569,10 @@
           </div>
 
           <div class="exp-entry">
-            <div class="exp-date">Oct. 2024 – May 2026</div>
+            <div class="exp-logo">
+              <img src="photo/aut.png" alt="Amirkabir University of Technology logo" loading="lazy">
+              <div class="exp-date">Oct. 2024 – May 2026</div>
+            </div>
             <div class="exp-body">
               <h3>Microwave Measurement Lab @ Amirkabir University of Technology</h3>
               <p class="role">Research Assistant</p>
@@ -559,7 +586,10 @@
           </div>
 
           <div class="exp-entry">
-            <div class="exp-date">July 2024 – Oct. 2024</div>
+            <div class="exp-logo">
+              <img src="photo/ITRC.png" alt="Iran Telecommunication Research Centre logo" loading="lazy">
+              <div class="exp-date">July 2024 – Oct. 2024</div>
+            </div>
             <div class="exp-body">
               <h3>Iran Telecommunication Research Centre (ITRC)</h3>
               <p class="role">Research Intern</p>
@@ -626,7 +656,10 @@
         <div class="exp-list">
 
           <div class="exp-entry">
-            <div class="exp-date">Feb. 2024 – Feb. 2026</div>
+            <div class="exp-logo">
+              <img src="photo/benis_logo.jpeg" alt="Benis Food Industries Company logo" loading="lazy">
+              <div class="exp-date">Feb. 2024 – Feb. 2026</div>
+            </div>
             <div class="exp-body">
               <h3>Benis Food Industries Company</h3>
               <p class="role">Machine Vision and Automation Developer</p>
@@ -639,7 +672,10 @@
           </div>
 
           <div class="exp-entry">
-            <div class="exp-date">June 2022 – May 2026</div>
+            <div class="exp-logo">
+              <img src="photo/RoboDaneshlogo.jpg" alt="RoboDanesh Robotic Academy logo" loading="lazy">
+              <div class="exp-date">June 2022 – May 2026</div>
+            </div>
             <div class="exp-body">
               <h3>RoboDanesh Robotic Academy</h3>
               <p class="role">Robotics Instructor</p>
@@ -658,7 +694,10 @@
         <div class="exp-list">
 
           <div class="exp-entry">
-            <div class="exp-date">2026 – present</div>
+            <div class="exp-logo">
+              <img src="photo/sfu.jpg" alt="Simon Fraser University logo" loading="lazy">
+              <div class="exp-date">2026 – present</div>
+            </div>
             <div class="exp-body">
               <h3>Simon Fraser University</h3>
               <p class="role">M.Sc. in Computing Science</p>
@@ -666,7 +705,10 @@
           </div>
 
           <div class="exp-entry">
-            <div class="exp-date">2021 – 2026</div>
+            <div class="exp-logo">
+              <img src="photo/aut.png" alt="Amirkabir University of Technology logo" loading="lazy">
+              <div class="exp-date">2021 – 2026</div>
+            </div>
             <div class="exp-body">
               <h3>Amirkabir University of Technology</h3>
               <p class="role">B.Sc. in Electrical Engineering (Telecommunication)</p>
@@ -674,7 +716,10 @@
           </div>
 
           <div class="exp-entry">
-            <div class="exp-date">2017 – 2020</div>
+            <div class="exp-logo">
+              <img src="photo/danesh.jpg" alt="Danesh High School logo" loading="lazy">
+              <div class="exp-date">2017 – 2020</div>
+            </div>
             <div class="exp-body">
               <h3>Danesh High School</h3>
               <p class="role">Diploma, Mathematics &amp; Physics</p>
