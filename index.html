@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +15,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Icons (Font Awesome via CDN) -->
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* ═══════════════════════════════════════════════════════════════
-       THEME — edit these CSS variables to restyle the whole page
-       ═══════════════════════════════════════════════════════════════ */
     :root {
       --accent:    #2563eb;
       --text:      #1a1a1a;
@@ -33,7 +31,6 @@
       --radius:    6px;
     }
 
-    /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; scroll-padding-top: 62px; }
     body {
@@ -47,13 +44,8 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ── Layout ── */
     .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
 
-
-    /* ══════════════════════════════════════════
-       NAVIGATION
-       ══════════════════════════════════════════ */
     nav {
       position: sticky;
       top: 0;
@@ -95,10 +87,6 @@
     }
     .nav-links a:hover { color: var(--text); }
 
-
-    /* ══════════════════════════════════════════
-       HERO / ABOUT
-       ══════════════════════════════════════════ */
     #about { padding: 3.5rem 0 2.5rem; }
 
     .hero {
@@ -154,7 +142,6 @@
       line-height: 1.75;
     }
 
-    /* Social icon row */
     .social-links {
       display: flex;
       flex-wrap: wrap;
@@ -175,7 +162,6 @@
     .social-links a:hover { color: var(--accent); text-decoration: none; }
     .social-links a i { font-size: 0.95rem; }
 
-    /* Contact email buttons */
     .contact-row { display: flex; flex-wrap: wrap; gap: 0.45rem; }
     .contact-btn {
       display: inline-flex;
@@ -193,10 +179,6 @@
     .contact-btn:hover { background: var(--bg-hover); border-color: #d1d5db; text-decoration: none; }
     .contact-btn i { font-size: 0.82rem; }
 
-
-    /* ══════════════════════════════════════════
-       SECTION BASE
-       ══════════════════════════════════════════ */
     section { padding: 2.25rem 0; }
     section + section { border-top: 1px solid var(--border); }
 
@@ -209,10 +191,6 @@
       margin-bottom: 1.5rem;
     }
 
-
-    /* ══════════════════════════════════════════
-       PUBLICATIONS
-       ══════════════════════════════════════════ */
     .pub-list { display: flex; flex-direction: column; gap: 0; }
 
     .pub-item {
@@ -297,34 +275,6 @@
       text-decoration: none;
     }
 
-    /* Video cards */
-    .pub-videos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1rem;
-    }
-    .video-card {
-      flex: 1 1 calc(50% - 0.375rem);
-      min-width: 240px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .video-responsive { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-    .video-responsive iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-    .video-label {
-      padding: 0.28rem 0.6rem;
-      font-size: 0.73rem;
-      color: var(--muted);
-      background: var(--bg-hover);
-      border-top: 1px solid var(--border);
-    }
-
-
-    /* ══════════════════════════════════════════
-       EXPERIENCE (Research + Industry)
-       ══════════════════════════════════════════ */
     .exp-list { display: flex; flex-direction: column; gap: 1.5rem; }
 
     .exp-entry { display: flex; gap: 1.5rem; }
@@ -346,56 +296,14 @@
     .exp-body ul { padding-left: 1.1rem; margin-top: 0.2rem; }
     .exp-body li { margin-bottom: 0.15rem; }
 
-    .btn-linkedin {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      font-size: 0.77rem;
-      font-weight: 500;
-      padding: 0.22rem 0.6rem;
-      border-radius: var(--radius);
-      background: #0077b5;
-      color: #fff;
-      text-decoration: none;
-      margin-top: 0.5rem;
-      transition: background 0.15s;
-    }
-    .btn-linkedin:hover { background: #005f93; text-decoration: none; color: #fff; }
-
-    /* Badge pill */
-    .badge {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 600;
-      padding: 0.08rem 0.45rem;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #fff;
-      letter-spacing: 0.03em;
-      vertical-align: middle;
-    }
-    .badge-gray { background: var(--muted); }
-
-
-    /* ══════════════════════════════════════════
-       EDUCATION
-       ══════════════════════════════════════════ */
     .edu-gpa { font-size: 0.84rem; color: #374151; margin-top: 0.15rem; }
 
-
-    /* ══════════════════════════════════════════
-       HONORS & AWARDS
-       ══════════════════════════════════════════ */
     .honors-list { display: flex; flex-direction: column; gap: 1rem; }
     .honor-entry { display: flex; gap: 0.75rem; align-items: flex-start; }
     .honor-icon { color: var(--accent); font-size: 0.85rem; margin-top: 0.22rem; flex-shrink: 0; }
     .honor-entry h3 { font-size: 0.88rem; font-weight: 600; margin-bottom: 0.08rem; }
     .honor-entry p { font-size: 0.82rem; color: var(--muted); }
 
-
-    /* ══════════════════════════════════════════
-       PROJECTS
-       ══════════════════════════════════════════ */
     .project-list { display: flex; flex-direction: column; gap: 0; }
 
     .project-item {
@@ -465,10 +373,6 @@
       text-decoration: none;
     }
 
-
-    /* ══════════════════════════════════════════
-       TEACHING & SERVICE
-       ══════════════════════════════════════════ */
     .teaching-block { margin-bottom: 1.75rem; }
     .teaching-block:last-child { margin-bottom: 0; }
     .teaching-block h3 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.1rem; }
@@ -479,10 +383,6 @@
     .course-item strong { color: var(--text); }
     .course-item .instr { color: var(--muted); font-size: 0.8rem; }
 
-
-    /* ══════════════════════════════════════════
-       HOBBIES
-       ══════════════════════════════════════════ */
     .hobbies-text { font-size: 0.9rem; color: #374151; margin-bottom: 0.75rem; }
     .hobby-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .hobby-links a {
@@ -500,10 +400,6 @@
     }
     .hobby-links a:hover { background: var(--bg-hover); border-color: #d1d5db; text-decoration: none; }
 
-
-    /* ══════════════════════════════════════════
-       FOOTER
-       ══════════════════════════════════════════ */
     footer {
       border-top: 1px solid var(--border);
       padding: 1.75rem 0;
@@ -513,10 +409,6 @@
       color: var(--muted);
     }
 
-
-    /* ══════════════════════════════════════════
-       RESPONSIVE — mobile (≤ 640px)
-       ══════════════════════════════════════════ */
     @media (max-width: 640px) {
       h1.name { font-size: 1.5rem; }
 
@@ -536,24 +428,19 @@
       .exp-entry { flex-direction: column; gap: 0.1rem; }
       .exp-date { width: auto; }
 
-      .video-card { flex: 1 1 100%; min-width: unset; }
-
       .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════════
-       NAVIGATION
-       Replace "Your Name" with your actual name and update nav links to match your sections.
-       ══════════════════════════════════════════ -->
   <nav>
     <div class="wrap">
       <a class="nav-brand" href="#about">Armin Soleymani</a>
       <ul class="nav-links">
         <li><a href="#publications">Publications</a></li>
         <li><a href="#research">Research</a></li>
+        <li><a href="#honors">Honors</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#teaching">Teaching</a></li>
@@ -564,26 +451,23 @@
   <main>
     <div class="wrap">
 
-      <!-- ══════════════════════════════════════════
-           ABOUT / HERO
-           ══════════════════════════════════════════ -->
       <section id="about">
         <div class="hero">
 
           <div class="hero-bio">
-            <!-- EDIT: Replace with your name -->
             <h1 class="name">Armin Soleymani</h1>
 
-            <!-- EDIT: Replace with your position · lab · research interests -->
             <p class="tagline">
-              Research Assistant &nbsp;·&nbsp; GrUVi Lab @ SFU &nbsp;·&nbsp;
-              3D Reconstruction &nbsp;·&nbsp; Generative Modeling
+              Research Assistant &nbsp;·&nbsp;
+              <a href="https://gruvi.cs.sfu.ca//" target="_blank" rel="noopener">GrUVi Lab @ SFU</a>
+              &nbsp;·&nbsp; 3D Reconstruction &nbsp;·&nbsp; Generative Modeling
             </p>
 
-            <!-- EDIT: Replace with your bio paragraph(s) -->
             <p class="bio-text">
-              I am a Research Assistant at <a href="https://gruvi.cs.sfu.ca/" target="_blank" rel="noopener">GrUVi Lab @ SFU</a>,
-              working under the supervision of <a href="https://arash-mham.github.io/" target="_blank" rel="noopener">Prof. Ali Mahdavi-Amiri</a>.
+              I am a Research Assistant at the
+              <a href="https://gruvi.cs.sfu.ca//" target="_blank" rel="noopener">GrUVi Lab</a>
+              at Simon Fraser University, working under the supervision of
+              <a href="https://arash-mham.github.io/" target="_blank" rel="noopener">Prof. Ali Mahdavi-Amiri</a>.
               My research lies in computer graphics, with a focus on single-view 3D reconstruction,
               primitive fitting, and generative modeling.
             </p>
@@ -596,7 +480,6 @@
               visual content creation, and interactive graphics.
             </p>
 
-            <!-- EDIT: Add/remove social links. Remove entire <a> if you don't use that platform. -->
             <div class="social-links">
               <a href="https://github.com/ArminSLM" target="_blank" rel="noopener">
                 <i class="fab fa-github"></i> GitHub
@@ -604,14 +487,13 @@
               <a href="https://www.linkedin.com/in/armin-soleymani" target="_blank" rel="noopener">
                 <i class="fab fa-linkedin"></i> LinkedIn
               </a>
-              <a href="https://scholar.google.com/citations?user=80gLkXIAAAAJ&hl=en" target="_blank" rel="noopener">
+              <a href="https://scholar.google.com/citations?user=80gLkXIAAAAJ&amp;hl=en" target="_blank" rel="noopener">
                 <i class="fas fa-graduation-cap"></i> Scholar
               </a>
             </div>
 
-            <!-- EDIT: Add/remove contact email buttons -->
             <div class="contact-row">
-              <a href="mailto:your.email@example.com" class="contact-btn">
+              <a href="mailto:armin.soleymani82@gmail.com" class="contact-btn">
                 <i class="fas fa-envelope"></i> Email
               </a>
               <a href="data/cv.pdf" class="contact-btn">
@@ -620,9 +502,6 @@
             </div>
           </div>
 
-          <!-- EDIT: Replace the placeholder div with an <img> tag:
-               <img src="images/profile.jpg" alt="Your Name">
-          -->
           <div class="hero-photo">
             <div class="photo-placeholder">
               <i class="fas fa-user-circle"></i>
@@ -633,203 +512,179 @@
         </div>
       </section>
 
-
-      <!-- ══════════════════════════════════════════
-           PUBLICATIONS
-
-           HOW TO ADD A PUBLICATION:
-             1. Copy one complete .pub-item block below.
-             2. Fill in:
-                  • .pub-thumb img[src]   — thumbnail image path (e.g. images/paper1.png)
-                  • .pub-title            — paper title
-                  • .pub-authors          — wrap YOUR name in <strong>...</strong>
-                  • .pub-venue            — conference / journal / status
-                  • .pub-abstract         — one-sentence summary (optional: delete the <p> tag)
-                  • .pub-links a          — arXiv / PDF / Project Page / Code links
-             3. To add demo videos: uncomment the .pub-videos block template.
-
-           HOW TO REMOVE: delete the entire .pub-item block.
-           ══════════════════════════════════════════ -->
       <section id="publications">
         <h2 class="section-title">Publications</h2>
         <div class="pub-list">
 
-          <!-- ── Publication 1 ──────────────────────────────────── -->
           <div class="pub-item">
             <div class="pub-entry">
               <div class="pub-thumb">
-                <!-- EDIT: Replace with <img src="images/paper1.png" alt="Paper 1 thumbnail" loading="lazy"> -->
                 <div class="pub-thumb-placeholder"><i class="fas fa-image"></i></div>
               </div>
               <div class="pub-content">
-                <!-- EDIT: Paper title -->
-                <p class="pub-title">Add here your text — Paper Title</p>
-                <!-- EDIT: Authors — put YOUR name inside <strong>...</strong> -->
+                <p class="pub-title">RadarPose: Frequency-Domain Diffusion for mmWave Radar-Based Human Pose Estimation</p>
                 <p class="pub-authors">
-                  <strong>Your Name</strong>, Co-Author One, Co-Author Two
+                  <strong>Armin Soleymani</strong>,
+                  <a href="https://scholar.google.com/citations?user=aqDwiFEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Negar Pouya</a>,
+                  <a href="https://scholar.google.com/citations?user=KCgGlJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Gholamreza Moradi</a>
                 </p>
-                <!-- EDIT: Venue and year -->
-                <p class="pub-venue">Conference / Journal Name, Year</p>
-                <!-- EDIT: One-sentence abstract (optional — delete this <p> if not needed) -->
+                <p class="pub-venue">Under Preparation</p>
                 <p class="pub-abstract">
-                  Add here your text — a brief one-sentence description of what this paper does and why it matters.
+                  This work develops a diffusion-based framework for human pose estimation from mmWave radar signals.
+                  By operating in the frequency domain, the model is designed to capture global motion structure while
+                  suppressing high-frequency radar noise. It further integrates spatio-temporal representations with
+                  diffusion models and graph convolutional networks to improve joint localization in challenging
+                  conditions such as occlusion.
                 </p>
-                <!-- EDIT: Links to paper resources -->
                 <div class="pub-links">
-                  <a href="#">arXiv</a>
-                  <a href="#">Project Page</a>
-                  <a href="#">Code</a>
+                  <a href="#">Coming Soon</a>
                 </div>
               </div>
             </div>
           </div>
-          <!-- ─────────────────────────────────────────────────────── -->
 
-          <!-- ── Publication 2 ──────────────────────────────────── -->
           <div class="pub-item">
             <div class="pub-entry">
               <div class="pub-thumb">
-                <!-- EDIT: Replace with <img src="images/paper2.png" alt="Paper 2 thumbnail" loading="lazy"> -->
                 <div class="pub-thumb-placeholder"><i class="fas fa-image"></i></div>
               </div>
               <div class="pub-content">
-                <p class="pub-title">Add here your text — Second Paper Title</p>
+                <p class="pub-title">FiReT: A Neural Radiance Fields Framework for Wireless Field Reconstruction and Transmitter Placement</p>
                 <p class="pub-authors">
-                  Co-Author One, <strong>Your Name</strong>, Co-Author Two
+                  <a href="https://scholar.google.com/citations?user=aqDwiFEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Negar Pouya</a>,
+                  <a href="https://scholar.google.com/citations?user=80gLkXIAAAAJ&amp;hl=en" target="_blank" rel="noopener"><strong>Armin Soleymani</strong></a>,
+                  <a href="https://scholar.google.com/citations?user=KCgGlJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Gholamreza Moradi</a>,
+                  <a href="https://scholar.google.com/citations?user=nmZp2s8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Farzaneh Abdollahi</a>
                 </p>
-                <p class="pub-venue">Conference / Journal Name, Year</p>
+                <p class="pub-venue">IKT, 2025</p>
                 <p class="pub-abstract">
-                  Add here your text — describe what this paper contributes to the field.
+                  FiReT introduces a NeRF-based framework for learning a continuous representation of indoor wireless
+                  radiation fields from sparse receiver measurements. By modeling how the field changes across candidate
+                  transmitter locations, the method estimates wireless channels at unseen spatial points and evaluates
+                  deployment scenarios without exhaustive site surveys. This Neural Radiance Fields formulation enables
+                  scalable wireless field reconstruction and supports the selection of transmitter placements that provide
+                  robust coverage in complex indoor environments.
                 </p>
                 <div class="pub-links">
-                  <a href="#">PDF</a>
-                  <a href="#">arXiv</a>
+                  <a href="https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176160183.34430108/v1" target="_blank" rel="noopener">Preprint</a>
+                  <a href="https://ngrpu.github.io/FiReT/" target="_blank" rel="noopener">Project Page</a>
+                  <a href="https://www.youtube.com/watch?v=zeSxnQ__zcE" target="_blank" rel="noopener">Presentation Video</a>
                 </div>
               </div>
             </div>
           </div>
-          <!-- ─────────────────────────────────────────────────────── -->
 
-          <!--
-          TEMPLATE — copy, uncomment, and fill in to add more publications:
-
-          <div class="pub-item">
-            <div class="pub-entry">
-              <div class="pub-thumb">
-                <img src="images/PAPER_THUMB.png" alt="Paper thumbnail" loading="lazy">
-              </div>
-              <div class="pub-content">
-                <p class="pub-title">Add here your text — Paper Title</p>
-                <p class="pub-authors">
-                  <strong>Your Name</strong>, Co-Author One
-                </p>
-                <p class="pub-venue">Venue, Year</p>
-                <p class="pub-abstract">
-                  Add here your text.
-                </p>
-                <div class="pub-links">
-                  <a href="#">arXiv</a>
-                  <a href="#">Project Page</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          -->
-
-        </div><!-- /pub-list -->
+        </div>
       </section>
 
-
-      <!-- ══════════════════════════════════════════
-           RESEARCH EXPERIENCE
-
-           HOW TO ADD AN ENTRY:
-             1. Copy one .exp-entry block.
-             2. Fill in .exp-date, h3 (institution), .role, and the description.
-             3. Add a .btn-linkedin for a recommendation link, or remove it entirely.
-
-           HOW TO REMOVE: delete the entire .exp-entry block.
-           ══════════════════════════════════════════ -->
       <section id="research">
         <h2 class="section-title">Research Experience</h2>
         <div class="exp-list">
 
-          <!-- ── Research Position 1 ── -->
           <div class="exp-entry">
-            <!-- EDIT: Date range -->
-            <div class="exp-date">Year – present</div>
+            <div class="exp-date">May 2026 – present</div>
             <div class="exp-body">
-              <!-- EDIT: Institution name -->
-              <h3>Institution / Lab Name</h3>
-              <!-- EDIT: Your role/title -->
-              <p class="role">Research Assistant / Intern / Fellow</p>
-              <!-- EDIT: Description of what you worked on -->
+              <h3>GrUVi Lab @ Simon Fraser University</h3>
+              <p class="role">Research Assistant</p>
               <p>
-                Add here your text. Describe your research project, supervisors, methods, and outcomes.
-                You can add <a href="#">links</a> to your supervisors' pages or relevant papers.
+                Supervised by <a href="https://arash-mham.github.io/" target="_blank" rel="noopener">Prof. Arash Mahdavi-Amiri</a>,
+                conducting research on 3D shape reconstruction and primitive fitting.
               </p>
             </div>
           </div>
 
-          <!-- ── Research Position 2 ── -->
           <div class="exp-entry">
-            <div class="exp-date">Year – Year</div>
+            <div class="exp-date">Oct. 2024 – May 2026</div>
             <div class="exp-body">
-              <h3>Second Institution / Lab Name</h3>
-              <p class="role">Role Title</p>
+              <h3>Microwave Measurement Lab @ Amirkabir University of Technology</h3>
+              <p class="role">Research Assistant</p>
               <p>
-                Add here your text. Describe your research contributions at this position.
+                Supervised by
+                <a href="https://scholar.google.com/citations?user=KCgGlJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Gholamreza Moradi</a>,
+                conducting research on NeRF-based wireless scene reconstruction and channel estimation, as well as
+                human pose estimation using radar signal processing.
               </p>
-              <!-- EDIT: Remove this button if you have no LinkedIn recommendation -->
-              <a href="https://linkedin.com/in/YOUR_USERNAME" class="btn-linkedin"
-                 target="_blank" rel="noopener">
-                <i class="fab fa-linkedin"></i> LinkedIn Recommendation
-              </a>
             </div>
           </div>
-
-          <!--
-          TEMPLATE — copy and uncomment to add more entries:
 
           <div class="exp-entry">
-            <div class="exp-date">Year – Year</div>
+            <div class="exp-date">July 2024 – Oct. 2024</div>
             <div class="exp-body">
-              <h3>Institution Name</h3>
-              <p class="role">Role</p>
-              <p>Add here your text.</p>
+              <h3>Iran Telecommunication Research Centre (ITRC)</h3>
+              <p class="role">Research Intern</p>
+              <p>
+                Worked on deep learning–based image segmentation for estimating cultivated areas of strategic crops.
+                Developed a GAN-based augmentation pipeline to enrich satellite imagery datasets and integrated real
+                and synthetic images into a U-Net model for improved land segmentation.
+              </p>
             </div>
           </div>
-          -->
 
-        </div><!-- /exp-list -->
+        </div>
       </section>
 
+      <section id="honors">
+        <h2 class="section-title">Honors &amp; Awards</h2>
+        <div class="honors-list">
 
-      <!-- ══════════════════════════════════════════
-           EDUCATION
-           Same template as Research — copy .exp-entry to add a degree.
-           ══════════════════════════════════════════ -->
+          <div class="honor-entry">
+            <i class="fas fa-star honor-icon"></i>
+            <div>
+              <h3>Ranked among the top 1% in the university entrance exam</h3>
+              <p>Achieved a top 1% ranking among more than 142,000 participants.</p>
+            </div>
+          </div>
+
+          <div class="honor-entry">
+            <i class="fas fa-medal honor-icon"></i>
+            <div>
+              <h3>1st Place – RoboCup Salvador 2025, Rescue Line League</h3>
+              <p>RoboCup Federation.</p>
+            </div>
+          </div>
+
+          <div class="honor-entry">
+            <i class="fas fa-medal honor-icon"></i>
+            <div>
+              <h3>1st Place – RoboCup Sydney 2019, Rescue Line League</h3>
+              <p>RoboCup Federation.</p>
+            </div>
+          </div>
+
+          <div class="honor-entry">
+            <i class="fas fa-medal honor-icon"></i>
+            <div>
+              <h3>2nd Place – RoboCup Eindhoven 2024, Rescue Line League</h3>
+              <p>RoboCup Federation.</p>
+            </div>
+          </div>
+
+          <div class="honor-entry">
+            <i class="fas fa-medal honor-icon"></i>
+            <div>
+              <h3>1st Place – FIRA RoboWorld Cup Taichung City 2018</h3>
+              <p>Federation of International Robot-Sport Association.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <section id="education">
         <h2 class="section-title">Education</h2>
         <div class="exp-list">
 
-          <!-- ── Degree 1 ── -->
           <div class="exp-entry">
-            <!-- EDIT: Year range -->
             <div class="exp-date">Year – Year</div>
             <div class="exp-body">
-              <!-- EDIT: University name -->
               <h3>University Name</h3>
-              <!-- EDIT: Degree type and field -->
               <p class="role">PhD / MSc / BSc in Your Field</p>
-              <!-- EDIT: GPA, rank, or other relevant info (optional — delete if not needed) -->
               <p class="edu-gpa">
                 Add here your text — GPA, ranking, thesis title, or other details.
               </p>
             </div>
           </div>
 
-          <!-- ── Degree 2 ── -->
           <div class="exp-entry">
             <div class="exp-date">Year – Year</div>
             <div class="exp-body">
@@ -839,94 +694,29 @@
             </div>
           </div>
 
-        </div><!-- /exp-list -->
+        </div>
       </section>
 
-
-      <!-- ══════════════════════════════════════════
-           HONORS & AWARDS
-
-           HOW TO ADD: copy one .honor-entry block.
-           Icon options (Font Awesome free): fa-trophy  fa-medal  fa-star  fa-award  fa-certificate
-           ══════════════════════════════════════════ -->
-      <section id="honors">
-        <h2 class="section-title">Honors &amp; Awards</h2>
-        <div class="honors-list">
-
-          <div class="honor-entry">
-            <!-- EDIT: Change the icon class -->
-            <i class="fas fa-trophy honor-icon"></i>
-            <div>
-              <!-- EDIT: Award name -->
-              <h3>Add here your text — Award or Honor Name</h3>
-              <!-- EDIT: Short description -->
-              <p>Add here your text — brief description of the award and when/why you received it.</p>
-            </div>
-          </div>
-
-          <div class="honor-entry">
-            <i class="fas fa-medal honor-icon"></i>
-            <div>
-              <h3>Add here your text — Second Award Name</h3>
-              <p>Add here your text — brief description.</p>
-            </div>
-          </div>
-
-          <!--
-          TEMPLATE — copy and uncomment to add more:
-
-          <div class="honor-entry">
-            <i class="fas fa-star honor-icon"></i>
-            <div>
-              <h3>Award Name</h3>
-              <p>Add here your text.</p>
-            </div>
-          </div>
-          -->
-
-        </div><!-- /honors-list -->
-      </section>
-
-
-      <!-- ══════════════════════════════════════════
-           PROJECTS
-
-           HOW TO ADD A PROJECT:
-             1. Copy one .project-item block.
-             2. Fill in:
-                  • .project-thumb img[src]  — thumbnail image path
-                  • h3                       — project name
-                  • p                        — short description
-                  • .tag-list .tag           — technology tags
-                  • .project-links a         — GitHub / demo / paper links
-           HOW TO REMOVE: delete the entire .project-item block.
-           ══════════════════════════════════════════ -->
       <section id="projects">
         <h2 class="section-title">
-          Projects &nbsp;<a href="https://github.com/YOUR_USERNAME" target="_blank"
+          Projects &nbsp;<a href="https://github.com/ArminSLM" target="_blank"
             style="font-size:0.73rem; font-weight:400; color:var(--muted); text-transform:none; letter-spacing:0;">
             → GitHub
           </a>
         </h2>
         <div class="project-list">
 
-          <!-- ── Project 1 ── -->
           <div class="project-item">
             <div class="project-thumb">
-              <!-- EDIT: Replace with <img src="images/project1.png" alt="Project Name" loading="lazy"> -->
               <div class="project-thumb-placeholder"><i class="fas fa-image"></i></div>
             </div>
             <div class="project-content">
-              <!-- EDIT: Project name -->
               <h3>Add here your text — Project Name</h3>
-              <!-- EDIT: One-line description -->
               <p>Add here your text — a brief description of what this project does.</p>
-              <!-- EDIT: Technology tags — add/remove <span class="tag"> elements -->
               <div class="tag-list">
                 <span class="tag">Tag 1</span>
                 <span class="tag">Tag 2</span>
               </div>
-              <!-- EDIT: Links -->
               <div class="project-links">
                 <a href="#">GitHub</a>
                 <a href="#">Demo</a>
@@ -934,7 +724,6 @@
             </div>
           </div>
 
-          <!-- ── Project 2 ── -->
           <div class="project-item">
             <div class="project-thumb">
               <div class="project-thumb-placeholder"><i class="fas fa-image"></i></div>
@@ -951,52 +740,21 @@
             </div>
           </div>
 
-          <!--
-          TEMPLATE — copy and uncomment to add more:
-
-          <div class="project-item">
-            <div class="project-thumb">
-              <img src="images/PROJECT_THUMB.png" alt="Project thumbnail" loading="lazy">
-            </div>
-            <div class="project-content">
-              <h3>Add here your text — Project Name</h3>
-              <p>Add here your text.</p>
-              <div class="tag-list">
-                <span class="tag">Tag</span>
-              </div>
-              <div class="project-links">
-                <a href="#">GitHub</a>
-              </div>
-            </div>
-          </div>
-          -->
-
-        </div><!-- /project-list -->
+        </div>
       </section>
 
-
-      <!-- ══════════════════════════════════════════
-           TEACHING & SERVICE
-
-           HOW TO ADD A COURSE: add a <p class="course-item"> line inside .course-list.
-           HOW TO ADD A NEW BLOCK: copy the entire .teaching-block div.
-           ══════════════════════════════════════════ -->
       <section id="teaching">
         <h2 class="section-title">Teaching &amp; Service</h2>
 
-        <!-- ── Teaching Assistant ── -->
         <div class="teaching-block">
-          <!-- EDIT: Institution name and date range -->
           <h3>Teaching Assistant — University Name</h3>
           <p class="meta">Add here your text — date range &nbsp;·&nbsp; any other relevant info</p>
           <div class="course-list">
-            <!-- EDIT: Add a line per course you TA'd -->
             <p class="course-item"><strong>Course Name</strong> — brief description. <span class="instr">Prof. Name</span></p>
             <p class="course-item"><strong>Second Course Name</strong> — add here your text. <span class="instr">Prof. Name</span></p>
           </div>
         </div>
 
-        <!-- ── Volunteering (optional — delete this block if not applicable) ── -->
         <div class="teaching-block">
           <h3>Volunteering &amp; Service</h3>
           <div class="course-list">
@@ -1007,18 +765,11 @@
 
       </section>
 
-
-      <!-- ══════════════════════════════════════════
-           OUTSIDE RESEARCH / HOBBIES
-           Edit the text and add/remove hobby links as needed.
-           ══════════════════════════════════════════ -->
       <section id="hobbies">
         <h2 class="section-title">Outside Research</h2>
-        <!-- EDIT: Describe your hobbies/interests -->
         <p class="hobbies-text">
           Add here your text — describe what you enjoy doing outside of research.
         </p>
-        <!-- EDIT: Add/remove hobby links. Remove entire <a> if not needed. -->
         <div class="hobby-links">
           <a href="#" target="_blank" rel="noopener">
             <i class="fas fa-gamepad"></i> Add here your text
@@ -1029,16 +780,16 @@
         </div>
       </section>
 
-    </div><!-- /wrap -->
+    </div>
   </main>
 
   <footer>
     <p>
-      <!-- EDIT: Replace with your name and year -->
-      &copy; 2025 Your Name &nbsp;·&nbsp;
+      &copy; 2026 Armin Soleymani &nbsp;·&nbsp;
       Design inspired by <a href="http://jonbarron.info" target="_blank" rel="noopener">Jon Barron</a>
     </p>
   </footer>
 
 </body>
 </html>
+```
