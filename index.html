@@ -253,6 +253,12 @@
       display: block;
       background: var(--card-hover);
      }
+    .pub-thumb img.zoom-out,
+    .pub-thumb video.zoom-out {
+      object-fit: contain;
+      padding: 0.35rem;
+      background: #fff;
+     }
     .pub-thumb img.zoom-out {
       object-fit: contain;
       padding: 0.35rem;
@@ -502,7 +508,7 @@
           <div class="pub-item">
             <div class="pub-entry">
               <div class="pub-thumb">
-                <video autoplay muted loop playsinline preload="auto" aria-label="RadarPose demo video">
+                <video class="zoom-out" autoplay muted loop playsinline preload="auto" aria-label="RadarPose demo video">
                   <source src="images/Wave.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
