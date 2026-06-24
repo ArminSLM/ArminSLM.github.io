@@ -6,7 +6,7 @@
   <title>Armin Soleymani</title>
   <meta name="description" content="Armin Soleymani — Research Assistant at GrUVi Lab, SFU. Research interests: 3D reconstruction and generative modeling.">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -250,6 +250,11 @@
       display: block;
       background: var(--card-hover);
     }
+    .pub-thumb img.zoom-out {
+      object-fit: contain;
+      padding: 0.35rem;
+      background: #fff;
+     }
     .pub-title {
       font-size: 0.96rem;
       font-weight: 750;
@@ -440,7 +445,7 @@
             <p class="bio-text">
               I am a Research Assistant at <a href="https://gruvi.cs.sfu.ca/" target="_blank" rel="noopener">GrUVi Lab @ SFU</a>,
               working under the supervision of <a href="https://arash-mham.github.io/" target="_blank" rel="noopener">Prof. Ali Mahdavi-Amiri</a>.
-              My research lies in computer graphics, with a focus on single-view 3D reconstruction,
+              My research lies in computer graphics, with a focus on 3D reconstruction,
               primitive fitting, and generative modeling.
             </p>
 
@@ -448,8 +453,7 @@
               Prior to joining SFU, I completed my B.Sc. in Electrical Engineering, majoring in
               Telecommunication, at Amirkabir University of Technology. I am broadly interested in
               methods that connect geometric reasoning with learning-based generation, and I enjoy
-              creating 3D objects while exploring how computational tools can support digital modeling,
-              visual content creation, and interactive graphics.
+              creating 3D objects.
             </p>
 
             <div class="social-links">
@@ -491,7 +495,7 @@
           <div class="pub-item">
             <div class="pub-entry">
               <div class="pub-thumb">
-                <img src="images/radar.jpg" alt="RadarPose project thumbnail" loading="lazy">
+                <img src="images/radarpose.jpg" alt="RadarPose project thumbnail" loading="lazy">
               </div>
               <div class="pub-content">
                 <p class="pub-title">RadarPose: Frequency-Domain Diffusion for mmWave Radar-Based Human Pose Estimation</p>
@@ -502,11 +506,11 @@
                 </p>
                 <p class="pub-venue">Under Preparation</p>
                 <p class="pub-abstract">
-                  This work develops a diffusion-based framework for human pose estimation from mmWave radar signals.
+                  This work develops a diffusion-based framework for human pose estimation from mmWave radar point clouds.
                   By operating in the frequency domain, the model is designed to capture global motion structure while
                   suppressing high-frequency radar noise. It further integrates spatio-temporal representations with
                   diffusion models and graph convolutional networks to improve joint localization in challenging
-                  conditions such as occlusion.
+                  conditions such as occlusion and poor lighting.
                 </p>
                 <div class="pub-links">
                   <a href="#">Coming Soon</a>
@@ -518,7 +522,7 @@
           <div class="pub-item">
             <div class="pub-entry">
               <div class="pub-thumb">
-                <img src="images/firet.jpg" alt="FiReT project thumbnail" loading="lazy">
+                <img class="zoom-out" src="images/firet.jpg" alt="FiReT project thumbnail" loading="lazy">
               </div>
               <div class="pub-content">
                 <p class="pub-title">FiReT: A Neural Radiance Fields Framework for Wireless Field Reconstruction and Transmitter Placement</p>
@@ -533,9 +537,7 @@
                   FiReT introduces a NeRF-based framework for learning a continuous representation of indoor wireless
                   radiation fields from sparse receiver measurements. By modeling how the field changes across candidate
                   transmitter locations, the method estimates wireless channels at unseen spatial points and evaluates
-                  deployment scenarios without exhaustive site surveys. This Neural Radiance Fields formulation enables
-                  scalable wireless field reconstruction and supports the selection of transmitter placements that provide
-                  robust coverage in complex indoor environments.
+                  deployment scenarios without exhaustive site surveys.
                 </p>
                 <div class="pub-links">
                   <a href="https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176160183.34430108/v1" target="_blank" rel="noopener">Preprint</a>
@@ -594,9 +596,9 @@
               <h3>Iran Telecommunication Research Centre (ITRC)</h3>
               <p class="role">Research Intern</p>
               <p>
-                Worked on deep learning–based image segmentation for estimating cultivated areas of strategic crops.
-                Developed a GAN-based augmentation pipeline to enrich satellite imagery datasets and integrated real
-                and synthetic images into a U-Net model for improved land segmentation.
+                Worked on image segmentation for estimating cultivated areas of strategic crops.
+                Developed a generative based augmentation pipeline to enrich satellite imagery datasets and integrated real
+                and synthetic images into our model for improved land segmentation.
               </p>
             </div>
           </div>
@@ -758,7 +760,7 @@
       <section id="hobbies">
         <h2 class="section-title">Hobbies</h2>
         <p class="hobbies-text">
-          Outside the lab, I enjoy cooking and creating well-crafted dishes inspired by the culinary training I received at a cooking school in my hometown. I have also participated in several cooking workshops, which continue to shape my interest in food, creativity, and presentation.
+          Outside the lab, I enjoy cooking and creating well-crafted dishes inspired by the culinary training I received at a cooking school in my hometown.
         </p>
       </section>
 
