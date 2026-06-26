@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,12 +7,12 @@
   <title>Armin Soleymani</title>
   <meta name="description" content="Armin Soleymani — Research Assistant at GrUVi Lab, SFU. Research interests: 3D reconstruction and generative modeling.">
 
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.png?v=5">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png?v=5">
+  <link rel="apple-touch-icon" href="images/favicon.png?v=5">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -252,18 +253,13 @@
       border: 1px solid var(--border);
       display: block;
       background: var(--card-hover);
-     }
+    }
     .pub-thumb img.zoom-out,
     .pub-thumb video.zoom-out {
       object-fit: contain;
       padding: 0.35rem;
       background: #fff;
-     }
-    .pub-thumb img.zoom-out {
-      object-fit: contain;
-      padding: 0.35rem;
-      background: #fff;
-     }
+    }
     .pub-title {
       font-size: 0.96rem;
       font-weight: 750;
@@ -377,25 +373,22 @@
     .course-item .instr { color: var(--muted); font-size: 0.8rem; }
 
     .hobbies-text { font-size: 0.9rem; color: #374151; margin-bottom: 0.75rem; }
-    .hobby-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .hobby-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.82rem;
-      font-weight: 650;
-      padding: 0.32rem 0.75rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--text);
-      background: #fff;
-      text-decoration: none;
-      transition: all 0.15s ease;
+
+    .hobby-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
     }
-    .hobby-links a:hover {
-      background: var(--accent-soft);
-      border-color: #c8d5df;
-      text-decoration: none;
+
+    .hobby-gallery img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      background: #fff;
     }
 
     footer {
@@ -423,8 +416,17 @@
       .exp-logo img { width: 56px; height: 56px; border-radius: 12px; }
       .exp-date { white-space: normal; padding-top: 0.25rem; }
       .nav-links a { padding-left: 0; }
+
+      .hobby-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hobby-gallery img {
+        height: 220px;
+      }
     }
   </style>
+
 </head>
 <body>
 
@@ -445,342 +447,350 @@
   <main>
     <div class="wrap">
 
-      <section id="about">
-        <div class="hero">
+```
+  <section id="about">
+    <div class="hero">
 
-          <div class="hero-bio">
-            <h1 class="name">Armin Soleymani</h1>
+      <div class="hero-bio">
+        <h1 class="name">Armin Soleymani</h1>
 
-            <p class="tagline">
-              Research Assistant &nbsp;·&nbsp; GrUVi Lab @ SFU
-            </p>
-
-            <p class="bio-text">
-              I am a Research Assistant at <a href="https://gruvi.cs.sfu.ca/" target="_blank" rel="noopener">GrUVi Lab @ SFU</a>,
-              working under the supervision of <a href="https://arash-mham.github.io/" target="_blank" rel="noopener">Prof. Ali Mahdavi-Amiri</a>.
-              My research lies in computer graphics, with a focus on 3D reconstruction,
-              primitive fitting, and generative modeling.
-            </p>
-
-            <p class="bio-text">
-              Prior to joining SFU, I completed my B.Sc. in Electrical Engineering, majoring in
-              Telecommunication, at Amirkabir University of Technology. I am broadly interested in
-              methods that connect geometric reasoning with learning-based generation, and I enjoy
-              creating 3D objects.
-            </p>
-
-            <div class="social-links">
-              <a href="https://github.com/ArminSLM" target="_blank" rel="noopener">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-              <a href="https://www.linkedin.com/in/armin-soleymani" target="_blank" rel="noopener">
-                <i class="fab fa-linkedin"></i> LinkedIn
-              </a>
-              <a href="https://scholar.google.com/citations?user=80gLkXIAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-                <i class="fas fa-graduation-cap"></i> Scholar
-              </a>
-            </div>
-
-            <div class="contact-row">
-              <a href="mailto:armin.soleymani82@gmail.com" class="contact-btn">
-                <i class="fas fa-envelope"></i> armin.soleymani82@gmail.com
-              </a>
-              <a href="mailto:armin_soleymani@sfu.ca" class="contact-btn">
-                <i class="fas fa-building-columns"></i> armin_soleymani@sfu.ca
-              </a>
-              <a href="ArminSoleymani-CV.pdf" class="contact-btn" download>
-                <i class="fas fa-file-pdf"></i> CV
-              </a>
-            </div>
-          </div>
-
-          <div class="hero-photo">
-            <img src="images/me.jpg" alt="Armin Soleymani">
-          </div>
-
-        </div>
-      </section>
-
-      <section id="publications">
-        <h2 class="section-title">Publications</h2>
-        <div class="pub-list">
-
-          <div class="pub-item">
-            <div class="pub-entry">
-              <div class="pub-thumb">
-                <video class="zoom-out" autoplay muted loop playsinline preload="auto" aria-label="RadarPose demo video">
-                  <source src="images/Wave.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="pub-content">
-                <p class="pub-title">RadarPose: Frequency-Domain Diffusion for mmWave Radar-Based Human Pose Estimation</p>
-                <p class="pub-authors">
-                  <strong>Armin Soleymani</strong>,
-                  <a href="https://scholar.google.com/citations?user=aqDwiFEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Negar Pouya</a>,
-                  <a href="https://scholar.google.com/citations?user=KCgGlJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Gholamreza Moradi</a>
-                </p>
-                <p class="pub-venue">Under Preparation</p>
-                <p class="pub-abstract">
-                  This work develops a diffusion-based framework for human pose estimation from mmWave radar point clouds.
-                  By operating in the frequency domain, the model is designed to capture global motion structure while
-                  suppressing high-frequency radar noise. It further integrates spatio-temporal representations with
-                  diffusion models and graph convolutional networks to improve joint localization in challenging
-                  conditions such as occlusion and poor lighting.
-                </p>
-                <div class="pub-links">
-                  <a href="#">Coming Soon</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <div class="pub-entry">
-              <div class="pub-thumb">
-                <img class="zoom-out" src="images/firet.jpg" alt="FiReT project thumbnail" loading="lazy">
-              </div>
-              <div class="pub-content">
-                <p class="pub-title">FiReT: A Neural Radiance Fields Framework for Wireless Field Reconstruction and Transmitter Placement</p>
-                <p class="pub-authors">
-                  <a href="https://scholar.google.com/citations?user=aqDwiFEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Negar Pouya</a>,
-                  <a href="https://scholar.google.com/citations?user=80gLkXIAAAAJ&amp;hl=en" target="_blank" rel="noopener"><strong>Armin Soleymani</strong></a>,
-                  <a href="https://scholar.google.com/citations?user=KCgGlJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Gholamreza Moradi</a>,
-                  <a href="https://scholar.google.com/citations?user=nmZp2s8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Farzaneh Abdollahi</a>
-                </p>
-                <p class="pub-venue">IKT, 2025</p>
-                <p class="pub-abstract">
-                  FiReT introduces a NeRF-based framework for learning a continuous representation of indoor wireless
-                  radiation fields from sparse receiver measurements. By modeling how the field changes across candidate
-                  transmitter locations, the method estimates wireless channels at unseen spatial points and evaluates
-                  deployment scenarios without exhaustive site surveys.
-                </p>
-                <div class="pub-links">
-                  <a href="https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176160183.34430108/v1" target="_blank" rel="noopener">Preprint</a>
-                  <a href="https://ngrpu.github.io/FiReT/" target="_blank" rel="noopener">Project Page</a>
-                  <a href="https://www.youtube.com/watch?v=zeSxnQ__zcE" target="_blank" rel="noopener">Presentation Video</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section id="research">
-        <h2 class="section-title">Research Experience</h2>
-        <div class="exp-list">
-
-          <div class="exp-entry">
-            <div class="exp-logo">
-              <img src="images/gruvi_logo.png" alt="GrUVi Lab logo" loading="lazy">
-              <div class="exp-date">May 2026 – present</div>
-            </div>
-            <div class="exp-body">
-              <h3>GrUVi Lab @ Simon Fraser University</h3>
-              <p class="role">Research Assistant</p>
-              <p>
-                Supervised by <a href="https://arash-mham.github.io/" target="_blank" rel="noopener">Prof. Arash Mahdavi-Amiri</a>,
-                conducting research on 3D shape reconstruction and primitive fitting.
-              </p>
-            </div>
-          </div>
-
-          <div class="exp-entry">
-            <div class="exp-logo">
-              <img src="images/aut.png" alt="Amirkabir University of Technology logo" loading="lazy">
-              <div class="exp-date">Oct. 2024 – May 2026</div>
-            </div>
-            <div class="exp-body">
-              <h3>Microwave Measurement Lab @ Amirkabir University of Technology</h3>
-              <p class="role">Research Assistant</p>
-              <p>
-                Supervised by
-                <a href="https://scholar.google.com/citations?user=KCgGlJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Gholamreza Moradi</a>,
-                conducting research on NeRF-based wireless scene reconstruction and channel estimation, as well as
-                human pose estimation using radar signal processing.
-              </p>
-            </div>
-          </div>
-
-          <div class="exp-entry">
-            <div class="exp-logo">
-              <img src="images/ITRC.png" alt="Iran Telecommunication Research Centre logo" loading="lazy">
-              <div class="exp-date">July 2024 – Oct. 2024</div>
-            </div>
-            <div class="exp-body">
-              <h3>Iran Telecommunication Research Centre (ITRC)</h3>
-              <p class="role">Research Intern</p>
-              <p>
-                Worked on image segmentation for estimating cultivated areas of strategic crops.
-                Developed a generative based augmentation pipeline to enrich satellite imagery datasets and integrated real
-                and synthetic images into our model for improved land segmentation.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section id="honors">
-        <h2 class="section-title">Honors &amp; Awards</h2>
-        <div class="honors-list">
-
-          <div class="honor-entry">
-            <i class="fas fa-star honor-icon"></i>
-            <div>
-              <h3>Ranked among the top 1% in the university entrance exam</h3>
-              <p>Achieved a top 1% ranking among more than 142,000 participants.</p>
-            </div>
-          </div>
-
-          <div class="honor-entry">
-            <i class="fas fa-medal honor-icon"></i>
-            <div>
-              <h3>1st Place – RoboCup Salvador 2025, Rescue Line League</h3>
-              <p>RoboCup Federation.</p>
-            </div>
-          </div>
-
-          <div class="honor-entry">
-            <i class="fas fa-medal honor-icon"></i>
-            <div>
-              <h3>1st Place – RoboCup Sydney 2019, Rescue Line League</h3>
-              <p>RoboCup Federation.</p>
-            </div>
-          </div>
-
-          <div class="honor-entry">
-            <i class="fas fa-medal honor-icon"></i>
-            <div>
-              <h3>2nd Place – RoboCup Eindhoven 2024, Rescue Line League</h3>
-              <p>RoboCup Federation.</p>
-            </div>
-          </div>
-
-          <div class="honor-entry">
-            <i class="fas fa-medal honor-icon"></i>
-            <div>
-              <h3>1st Place – FIRA RoboWorld Cup Taichung City 2018</h3>
-              <p>Federation of International Robot-Sport Association.</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section id="work">
-        <h2 class="section-title">Work Experience</h2>
-        <div class="exp-list">
-
-          <div class="exp-entry">
-            <div class="exp-logo">
-              <img src="images/benis_logo.jpeg" alt="Benis Food Industries Company logo" loading="lazy">
-              <div class="exp-date">Feb. 2024 – Feb. 2026</div>
-            </div>
-            <div class="exp-body">
-              <h3>Benis Food Industries Company</h3>
-              <p class="role">Machine Vision and Automation Developer</p>
-              <p>
-                Designed a machine vision system for detecting and classifying objects on a cake packaging line,
-                and integrated object detection with Festo pneumatic actuators to support precise separation and
-                automated packaging operations.
-              </p>
-            </div>
-          </div>
-
-          <div class="exp-entry">
-            <div class="exp-logo">
-              <img src="images/RoboDaneshlogo.jpg" alt="RoboDanesh Robotic Academy logo" loading="lazy">
-              <div class="exp-date">June 2022 – May 2026</div>
-            </div>
-            <div class="exp-body">
-              <h3>RoboDanesh Robotic Academy</h3>
-              <p class="role">Robotics Instructor</p>
-              <p>
-                Taught and mentored students in Python programming for image processing, C++ programming with AVR
-                controllers and Arduino, and electronic board design for robotics projects and competitions.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section id="education">
-        <h2 class="section-title">Education</h2>
-        <div class="exp-list">
-
-          <div class="exp-entry">
-            <div class="exp-logo">
-              <img src="images/sfu.png" alt="Simon Fraser University logo" loading="lazy">
-              <div class="exp-date">2026 – present</div>
-            </div>
-            <div class="exp-body">
-              <h3>Simon Fraser University</h3>
-              <p class="role">M.Sc. in Computing Science</p>
-            </div>
-          </div>
-
-          <div class="exp-entry">
-            <div class="exp-logo">
-              <img src="images/aut.png" alt="Amirkabir University of Technology logo" loading="lazy">
-              <div class="exp-date">2021 – 2026</div>
-            </div>
-            <div class="exp-body">
-              <h3>Amirkabir University of Technology</h3>
-              <p class="role">B.Sc. in Electrical Engineering (Telecommunication)</p>
-            </div>
-          </div>
-
-          <div class="exp-entry">
-            <div class="exp-logo">
-              <img src="images/danesh.jpg" alt="Danesh High School logo" loading="lazy">
-              <div class="exp-date">2017 – 2020</div>
-            </div>
-            <div class="exp-body">
-              <h3>Danesh High School</h3>
-              <p class="role">Diploma, Mathematics &amp; Physics</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section id="teaching">
-        <h2 class="section-title">Teaching &amp; Service</h2>
-
-        <div class="teaching-block">
-          <h3>Teaching Assistant</h3>
-          <div class="course-list">
-            <p class="course-item"><strong>Filter and Synthesis</strong> — Prof. Zahra Seifi <span class="instr">Jan. 2025 – Apr. 2025</span></p>
-            <p class="course-item"><strong>Communication Systems</strong> — Prof. Yaser Norouzi <span class="instr">Jan. 2025 – Apr. 2025</span></p>
-            <p class="course-item"><strong>Logical Circuits</strong> — Prof. Zahra Shariatmadar <span class="instr">Jan. 2025 – Apr. 2025</span></p>
-            <p class="course-item"><strong>Electromagnetics</strong> — Prof. Amirnader Askarpour <span class="instr">Sep. 2024 – Jan. 2025</span></p>
-          </div>
-        </div>
-
-        <div class="teaching-block">
-          <h3>Robotics Competition Technical Committee Member</h3>
-          <p class="meta">Rescue Line League Technical Committee Member</p>
-          <div class="course-list">
-            <p class="course-item"><strong>RoboCup 2025</strong> — Salvador</p>
-            <p class="course-item"><strong>RoboCup 2024</strong> — Eindhoven</p>
-            <p class="course-item"><strong>RoboCup IranOpen 2025</strong> — Tehran</p>
-            <p class="course-item"><strong>RoboCup IranOpen 2024</strong> — Tehran</p>
-          </div>
-        </div>
-
-      </section>
-
-      <section id="hobbies">
-        <h2 class="section-title">Hobbies</h2>
-        <p class="hobbies-text">
-          Outside the lab, I enjoy cooking and creating well-crafted dishes inspired by the culinary training I received at a cooking school in my hometown.
+        <p class="tagline">
+          Research Assistant &nbsp;·&nbsp; GrUVi Lab @ SFU
         </p>
-      </section>
+
+        <p class="bio-text">
+          I am a Research Assistant at <a href="https://gruvi.cs.sfu.ca/" target="_blank" rel="noopener">GrUVi Lab @ SFU</a>,
+          working under the supervision of <a href="https://arash-mham.github.io/" target="_blank" rel="noopener">Prof. Ali Mahdavi-Amiri</a>.
+          My research lies in computer graphics, with a focus on 3D reconstruction,
+          primitive fitting, and generative modeling.
+        </p>
+
+        <p class="bio-text">
+          Prior to joining SFU, I completed my B.Sc. in Electrical Engineering, majoring in
+          Telecommunication, at Amirkabir University of Technology. I am broadly interested in
+          methods that connect geometric reasoning with learning-based generation, and I enjoy
+          creating 3D objects.
+        </p>
+
+        <div class="social-links">
+          <a href="https://github.com/ArminSLM" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/armin-soleymani" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://scholar.google.com/citations?user=80gLkXIAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+            <i class="fas fa-graduation-cap"></i> Scholar
+          </a>
+        </div>
+
+        <div class="contact-row">
+          <a href="mailto:armin.soleymani82@gmail.com" class="contact-btn">
+            <i class="fas fa-envelope"></i> armin.soleymani82@gmail.com
+          </a>
+          <a href="mailto:armin_soleymani@sfu.ca" class="contact-btn">
+            <i class="fas fa-building-columns"></i> armin_soleymani@sfu.ca
+          </a>
+          <a href="ArminSoleymani-CV.pdf" class="contact-btn" download>
+            <i class="fas fa-file-pdf"></i> CV
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="images/me.jpg" alt="Armin Soleymani">
+      </div>
 
     </div>
+  </section>
+
+  <section id="publications">
+    <h2 class="section-title">Publications</h2>
+    <div class="pub-list">
+
+      <div class="pub-item">
+        <div class="pub-entry">
+          <div class="pub-thumb">
+            <video class="zoom-out" autoplay muted loop playsinline preload="auto" aria-label="RadarPose demo video">
+              <source src="images/Wave.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="pub-content">
+            <p class="pub-title">RadarPose: Frequency-Domain Diffusion for mmWave Radar-Based Human Pose Estimation</p>
+            <p class="pub-authors">
+              <strong>Armin Soleymani</strong>,
+              <a href="https://scholar.google.com/citations?user=aqDwiFEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Negar Pouya</a>,
+              <a href="https://scholar.google.com/citations?user=KCgGlJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Gholamreza Moradi</a>
+            </p>
+            <p class="pub-venue">Under Preparation</p>
+            <p class="pub-abstract">
+              This work develops a diffusion-based framework for human pose estimation from mmWave radar point clouds.
+              By operating in the frequency domain, the model is designed to capture global motion structure while
+              suppressing high-frequency radar noise. It further integrates spatio-temporal representations with
+              diffusion models and graph convolutional networks to improve joint localization in challenging
+              conditions such as occlusion and poor lighting.
+            </p>
+            <div class="pub-links">
+              <a href="#">Coming Soon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-entry">
+          <div class="pub-thumb">
+            <img class="zoom-out" src="images/firet.jpg" alt="FiReT project thumbnail" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <p class="pub-title">FiReT: A Neural Radiance Fields Framework for Wireless Field Reconstruction and Transmitter Placement</p>
+            <p class="pub-authors">
+              <a href="https://scholar.google.com/citations?user=aqDwiFEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Negar Pouya</a>,
+              <a href="https://scholar.google.com/citations?user=80gLkXIAAAAJ&amp;hl=en" target="_blank" rel="noopener"><strong>Armin Soleymani</strong></a>,
+              <a href="https://scholar.google.com/citations?user=KCgGlJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Gholamreza Moradi</a>,
+              <a href="https://scholar.google.com/citations?user=nmZp2s8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Farzaneh Abdollahi</a>
+            </p>
+            <p class="pub-venue">IKT, 2025</p>
+            <p class="pub-abstract">
+              FiReT introduces a NeRF-based framework for learning a continuous representation of indoor wireless
+              radiation fields from sparse receiver measurements. By modeling how the field changes across candidate
+              transmitter locations, the method estimates wireless channels at unseen spatial points and evaluates
+              deployment scenarios without exhaustive site surveys.
+            </p>
+            <div class="pub-links">
+              <a href="https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176160183.34430108/v1" target="_blank" rel="noopener">Preprint</a>
+              <a href="https://ngrpu.github.io/FiReT/" target="_blank" rel="noopener">Project Page</a>
+              <a href="https://www.youtube.com/watch?v=zeSxnQ__zcE" target="_blank" rel="noopener">Presentation Video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="research">
+    <h2 class="section-title">Research Experience</h2>
+    <div class="exp-list">
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="images/gruvi_logo.png" alt="GrUVi Lab logo" loading="lazy">
+          <div class="exp-date">May 2026 – present</div>
+        </div>
+        <div class="exp-body">
+          <h3>GrUVi Lab @ Simon Fraser University</h3>
+          <p class="role">Research Assistant</p>
+          <p>
+            Supervised by <a href="https://arash-mham.github.io/" target="_blank" rel="noopener">Prof. Arash Mahdavi-Amiri</a>,
+            conducting research on 3D shape reconstruction and primitive fitting.
+          </p>
+        </div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="images/aut.png" alt="Amirkabir University of Technology logo" loading="lazy">
+          <div class="exp-date">Oct. 2024 – May 2026</div>
+        </div>
+        <div class="exp-body">
+          <h3>Microwave Measurement Lab @ Amirkabir University of Technology</h3>
+          <p class="role">Research Assistant</p>
+          <p>
+            Supervised by
+            <a href="https://scholar.google.com/citations?user=KCgGlJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Gholamreza Moradi</a>,
+            conducting research on NeRF-based wireless scene reconstruction and channel estimation, as well as
+            human pose estimation using radar signal processing.
+          </p>
+        </div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="images/ITRC.png" alt="Iran Telecommunication Research Centre logo" loading="lazy">
+          <div class="exp-date">July 2024 – Oct. 2024</div>
+        </div>
+        <div class="exp-body">
+          <h3>Iran Telecommunication Research Centre (ITRC)</h3>
+          <p class="role">Research Intern</p>
+          <p>
+            Worked on image segmentation for estimating cultivated areas of strategic crops.
+            Developed a generative based augmentation pipeline to enrich satellite imagery datasets and integrated real
+            and synthetic images into our model for improved land segmentation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="honors">
+    <h2 class="section-title">Honors &amp; Awards</h2>
+    <div class="honors-list">
+
+      <div class="honor-entry">
+        <i class="fas fa-star honor-icon"></i>
+        <div>
+          <h3>Ranked among the top 1% in the university entrance exam</h3>
+          <p>Achieved a top 1% ranking among more than 142,000 participants.</p>
+        </div>
+      </div>
+
+      <div class="honor-entry">
+        <i class="fas fa-medal honor-icon"></i>
+        <div>
+          <h3>1st Place – RoboCup Salvador 2025, Rescue Line League</h3>
+          <p>RoboCup Federation.</p>
+        </div>
+      </div>
+
+      <div class="honor-entry">
+        <i class="fas fa-medal honor-icon"></i>
+        <div>
+          <h3>1st Place – RoboCup Sydney 2019, Rescue Line League</h3>
+          <p>RoboCup Federation.</p>
+        </div>
+      </div>
+
+      <div class="honor-entry">
+        <i class="fas fa-medal honor-icon"></i>
+        <div>
+          <h3>2nd Place – RoboCup Eindhoven 2024, Rescue Line League</h3>
+          <p>RoboCup Federation.</p>
+        </div>
+      </div>
+
+      <div class="honor-entry">
+        <i class="fas fa-medal honor-icon"></i>
+        <div>
+          <h3>1st Place – FIRA RoboWorld Cup Taichung City 2018</h3>
+          <p>Federation of International Robot-Sport Association.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="work">
+    <h2 class="section-title">Work Experience</h2>
+    <div class="exp-list">
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="images/benis_logo.jpeg" alt="Benis Food Industries Company logo" loading="lazy">
+          <div class="exp-date">Feb. 2024 – Feb. 2026</div>
+        </div>
+        <div class="exp-body">
+          <h3>Benis Food Industries Company</h3>
+          <p class="role">Machine Vision and Automation Developer</p>
+          <p>
+            Designed a machine vision system for detecting and classifying objects on a cake packaging line,
+            and integrated object detection with Festo pneumatic actuators to support precise separation and
+            automated packaging operations.
+          </p>
+        </div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="images/RoboDaneshlogo.jpg" alt="RoboDanesh Robotic Academy logo" loading="lazy">
+          <div class="exp-date">June 2022 – May 2026</div>
+        </div>
+        <div class="exp-body">
+          <h3>RoboDanesh Robotic Academy</h3>
+          <p class="role">Robotics Instructor</p>
+          <p>
+            Taught and mentored students in Python programming for image processing, C++ programming with AVR
+            controllers and Arduino, and electronic board design for robotics projects and competitions.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="exp-list">
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="images/sfu.png" alt="Simon Fraser University logo" loading="lazy">
+          <div class="exp-date">2026 – present</div>
+        </div>
+        <div class="exp-body">
+          <h3>Simon Fraser University</h3>
+          <p class="role">M.Sc. in Computing Science</p>
+        </div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="images/aut.png" alt="Amirkabir University of Technology logo" loading="lazy">
+          <div class="exp-date">2021 – 2026</div>
+        </div>
+        <div class="exp-body">
+          <h3>Amirkabir University of Technology</h3>
+          <p class="role">B.Sc. in Electrical Engineering (Telecommunication)</p>
+        </div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="images/danesh.jpg" alt="Danesh High School logo" loading="lazy">
+          <div class="exp-date">2017 – 2020</div>
+        </div>
+        <div class="exp-body">
+          <h3>Danesh High School</h3>
+          <p class="role">Diploma, Mathematics &amp; Physics</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="teaching">
+    <h2 class="section-title">Teaching &amp; Service</h2>
+
+    <div class="teaching-block">
+      <h3>Teaching Assistant</h3>
+      <div class="course-list">
+        <p class="course-item"><strong>Filter and Synthesis</strong> — Prof. Zahra Seifi <span class="instr">Jan. 2025 – Apr. 2025</span></p>
+        <p class="course-item"><strong>Communication Systems</strong> — Prof. Yaser Norouzi <span class="instr">Jan. 2025 – Apr. 2025</span></p>
+        <p class="course-item"><strong>Logical Circuits</strong> — Prof. Zahra Shariatmadar <span class="instr">Jan. 2025 – Apr. 2025</span></p>
+        <p class="course-item"><strong>Electromagnetics</strong> — Prof. Amirnader Askarpour <span class="instr">Sep. 2024 – Jan. 2025</span></p>
+      </div>
+    </div>
+
+    <div class="teaching-block">
+      <h3>Robotics Competition Technical Committee Member</h3>
+      <p class="meta">Rescue Line League Technical Committee Member</p>
+      <div class="course-list">
+        <p class="course-item"><strong>RoboCup 2025</strong> — Salvador</p>
+        <p class="course-item"><strong>RoboCup 2024</strong> — Eindhoven</p>
+        <p class="course-item"><strong>RoboCup IranOpen 2025</strong> — Tehran</p>
+        <p class="course-item"><strong>RoboCup IranOpen 2024</strong> — Tehran</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="hobbies">
+    <h2 class="section-title">Hobbies</h2>
+    <p class="hobbies-text">
+      Outside the lab, I enjoy cooking and creating well-crafted dishes inspired by the culinary training I received at a cooking school in my hometown.
+    </p>
+
+    <div class="hobby-gallery">
+      <img src="images/a1.jpg" alt="Cooking dish by Armin" loading="lazy">
+      <img src="images/a2.jpg" alt="Cooking dish by Armin" loading="lazy">
+    </div>
+  </section>
+
+</div>
+```
+
   </main>
 
   <footer>
